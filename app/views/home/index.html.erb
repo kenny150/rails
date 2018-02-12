@@ -1,0 +1,19 @@
+<h1>Acesso rápido</h1>
+<p>Find me in app/views/home/index.html.erb</p>
+<p>Menu da aplicação</p>
+
+
+<!-- Aqui é onde eu vou definir as rotas (linkar as páginas)
+     Haverá uma conversa entre o controles e a view, desta forma as variaveis que são declaradas em 
+     controller também será vistas pela view. -->
+
+<!-- Exemplo de uso sem o links 
+<li><a href="http://localhost:3000/phones">Telefone</a></li>
+--> 
+
+<ul>
+	<li><%= link_to "Tipos", kinds_path %></li>
+	<li><%= link_to "Contatos", contacts_path %></li>
+	<li><%= link_to "Endereços", addresses_path %></li>
+	<li><%= link_to "Telefone", phones_path %></li>
+</ul>

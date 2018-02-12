@@ -1,0 +1,32 @@
+<%= form_for(@kind, html: { class: "basic-grey" }) do |f| %> 
+<%= form_with(model: kind, local: true) do |form| %>
+  <% if kind.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(kind.errors.count, "error") %> prohibited this kind from being saved:</h2>
+
+      <ul>
+      <% kind.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description %>
+
+        <!-- Fiz uma caixa de seleção usando each
+    <select>
+      <%# Kind.all.each do |kind| %> // Comentário para Ruby ( # )
+        <option> <%= kind.description %> </option>
+        <%# end %>
+    </select> -->
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+<!--collection_select(#:contact, :kind_id, @vai_pegar_no_controler, :id, :description) %>-->
+<% end %>
