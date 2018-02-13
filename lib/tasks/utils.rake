@@ -3,7 +3,7 @@ namespace :utils do
   task seed: :environment do
     puts "Gerando os tipos de contatos"
       Kind.create!(
-      	description: [{"description" => "Trabalho", "description" => "Faculdade" }]
+      	description: "trabalho"
       	)
 
 
