@@ -24,13 +24,25 @@
 
   <div class="field">
     <%= form.label :kind_id %>
-    <select>
-      <% @vai_pegar_no_controler.each do |i| %> 
-        <option> <%= i.description %> </option>
-        <% end %>
-    </select>
-   
+    <%= collection_select(:contact, :kind_id, @vai_pegar_no_controler, :id, :description) %>
   </div>
+
+  <%= f.fields_for :address do |address_fields| %>
+  <div class="field">
+    <%= f.label :street %>
+    <%= address_fields.text_field :street %>
+  </div>
+
+  <div class="field">
+    <%= f.label :city %>
+    <%= address_fields.text_field :city %>
+  </div>
+
+  <div class="field">
+    <%= f.label :state %>
+    <%= address_fields.text_field :state %>
+  </div>
+  <% end %>
 
   <div class="field">
     <%= form.label :rmk %>
