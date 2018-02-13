@@ -20,6 +20,7 @@ class ContactsController < ApplicationController
 
   # GET /contacts/1/edit
   def edit
+    @vai_pegar_no_controler = Kind.all
   end
 
   # POST /contacts
