@@ -1,3 +1,4 @@
+<%= form_for(@contact, html: { class: "basic-grey" }) do |f| %>
 <%= form_with(model: contact, local: true) do |form| %>
   <% if contact.errors.any? %>
     <div id="error_explanation">
@@ -23,7 +24,12 @@
 
   <div class="field">
     <%= form.label :kind_id %>
-    <%= form.text_field :kind_id, id: :contact_kind_id %>
+    <select>
+      <% @vai_pegar_no_controler.each do |i| %> 
+        <option> <%= i.description %> </option>
+        <% end %>
+    </select>
+   
   </div>
 
   <div class="field">
@@ -34,4 +40,5 @@
   <div class="actions">
     <%= form.submit %>
   </div>
+<% end %>
 <% end %>
