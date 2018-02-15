@@ -29,10 +29,12 @@ namespace :utils do
 
   	   puts "Gerando os telefones"
   	   Contact.all.each do |contact|
-  	  	Phone.create!(
+        Random.rand(1..5).times do |i|
+  	  	 Phone.create!(
   	  		phone: Faker::PhoneNumber.phone_number,
   	  		contact: contact
   	  		)
+        end
   	  end
   end
 
