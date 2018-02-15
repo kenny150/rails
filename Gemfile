@@ -6,6 +6,8 @@ git_source(:github) do |repo_name|
 end
 
 
+#Gem da paginação
+gem 'kaminari'
 #Melhor aparencia dos formulários
 gem 'cocoon'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
