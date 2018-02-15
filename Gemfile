@@ -10,6 +10,8 @@ end
 gem 'rails', '~> 5.1.4'
 # Instalação da gem i18n
 gem 'rails-i18n', '~> 4.0.0'
+# Instalação da Gem lerolero
+gem 'lerolero_generator'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server
